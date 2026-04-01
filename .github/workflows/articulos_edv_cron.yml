@@ -2,12 +2,17 @@ name: Articulos EDV
 
 on:
   schedule:
-    - cron: '15 * * * *'   # Cada hora en punto (UTC)
+    - cron: '15 * * * *'   # Cada hora a y 15 minutos (UTC)
   workflow_dispatch:        # Permite lanzarlo manualmente desde GitHub
 
 jobs:
   enviar-noticia:
     runs-on: ubuntu-latest
+
+    env:
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      EMAIL_TO: ${{ secrets.EMAIL_TO }}
 
     steps:
       - name: Clonar repositorio
@@ -22,4 +27,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Ejecutar script
-        run: python elequipodeviaje_email_diario_articulos_fix.py --once
+        run: python elequipodeviaje_email_diario_articulos.py --once
