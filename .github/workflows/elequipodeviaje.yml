@@ -1,12 +1,12 @@
-name: Articulos EDV
+name: El Equipo de Viaje – Productos diarios
 
 on:
   schedule:
-    - cron: '15 * * * *'   # Cada hora en punto (UTC)
+    - cron: '0 9 * * *'   # Todos los días a las 9:00 UTC
   workflow_dispatch:        # Permite lanzarlo manualmente desde GitHub
 
 jobs:
-  enviar-noticia:
+  enviar-productos:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,5 +21,5 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      - name: Ejecutar script
-        run: python elequipodeviaje_email_diario_articulos_fix.py --once
+      - name: Ejecutar script (una sola vez)
+        run: python elequipodeviaje_email_diario_articulos.py --once
