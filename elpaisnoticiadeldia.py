@@ -26,7 +26,7 @@ from bs4 import BeautifulSoup
 
 EMAIL_ORIGEN  = "laminarrieta@gmail.com"       # Correo desde el que envías
 EMAIL_DESTINO = "laminarrieta@gmail.com"    # Correo donde recibirás la noticia
-CONTRASENA    = "tvqp lddb dekc nntx"       # Contraseña de aplicación de Gmail*
+CONTRASENA    = "fnuf eewy zzkd nnfv"       # Contraseña de aplicación de Gmail*
                                             # * Ve a: myaccount.google.com/apppasswords
 
 # ─────────────────────────────────────────────
