@@ -22,4 +22,4 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Ejecutar script
-        run: python elpaisnoticiadeldia.py
+        run: python elequipodeviaje_email_diario.py
