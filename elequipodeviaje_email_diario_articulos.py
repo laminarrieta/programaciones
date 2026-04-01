@@ -32,7 +32,7 @@ from typing import Iterable, List, Optional, Set
 from urllib.parse import urljoin, urlparse
 
 import requests
-import schedule
+#import schedule
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://elequipodeviaje.com/"
