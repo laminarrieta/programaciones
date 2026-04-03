@@ -2,7 +2,7 @@ name: El País – Noticia del día
 
 on:
   schedule:
-    - cron: '0 * * * *'   # Cada hora en punto (UTC)
+    - cron: '0 9 * * *'   # Cada dia a las 9 horas en punto (UTC)
   workflow_dispatch:        # Permite lanzarlo manualmente desde GitHub
 
 jobs:
